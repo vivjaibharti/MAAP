@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .mainDiv {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* align-content: center; */
+    justify-content: center;
+    background-color: rgb(76, 69, 69);
+    align-items: center;
+    background-image: url("{% static 'tu_cse_dept.jpeg' %}");
+
+    /* justify-items: center; */
+  }
+  .innerDiv {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    border: 2px solid burlywood;
+    border-radius: 4px;
+    background-color: crimson;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* align-items: centre; */
+    /* justify-items: center; */
+    /* justify-content: center; */
+  }
+  .logo {
+    display: flex;
+    padding: 5px;
+    /* flex-wrap: wrap; */
+    /* align-content: centre; */
+    justify-content: center;
+    /* justify-items: center; */
+  }
+  .img1 {
+    max-width: 80px;
+    height: 80px;
+  }
+  
+   #form1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .labelsDiv{
+    margin:5px;
+  }
+  
+  .inputboxDiv{
+    display:flex;
+    justify-content: center;
+    width:100%;
+    /* background-color: blue; */
+  }
+  
+  #loginbtnDiv{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px 20px;
+  }
+  
+  #loginbtnDiv button {
+    margin: 0 50px; /* Adjust the margin to increase/decrease space between buttons */
+  }
+  
+  .loginbtn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 20);
+  }
+  
+  #forgetDiv{
+    display:flex;
+    justify-content: center;
+    width:100%;
+  }
+  
