@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'loginApp',
+    'aapApp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,10 +76,42 @@ WSGI_APPLICATION = 'MAAP.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'maap',
+    #     'USER': 'admin',
+    #     'PASSWORD': '#Admin2023',
+    #     'HOST':'database-1.creuqsiegvba.ap-south-1.rds.amazonaws.com',
+    #     'PORT':'3315',
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'maap',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST':'localhost',
+        'PORT':'3306',
     }
+
+
+    # 'default': {
+    #     'ENGINE': 'djongo',
+    #     'NAME': 'MAAP',
+    #     # 'ENFORCE_SCHEMA':True,
+    #     'CLIENT': {
+    #         'host': 'mongodb+srv://csm20049:Csm20049@cluster0.bsf517z.mongodb.net/?retryWrites=true&w=majority',
+    #         'port': 27017,
+    #         'username': 'csm20049',
+    #         'password': 'Csm20049',
+    #         'authSource': 'admin',
+    #     }
+    # }
 }
 
 

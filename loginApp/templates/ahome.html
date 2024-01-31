@@ -1,0 +1,32 @@
+{% extends 'master_home.html' %}
+{% load static %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'ahome.css' %}">
+{% endblock %}
+
+{% block home %}
+    <a href="/loginApp/ahome">Home</a>
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Admin Home Page {{username}}</h1>
+<div id="innerDiv">
+    <div class="innerDiv1" id="innerDiv1">
+        <button class="adminBtn" id="adminBtn1">Edit Faculty</button>
+        <button class="adminBtn" id="adminBtn2">Edit School</button>
+        <button class="adminBtn" id="adminBtn3">Edit Department</button>
+        <button class="adminBtn" id="adminBtn4">Edit Session</button>
+        <button class="adminBtn" id="adminBtn5">Edit Course</button>
+        <button class="adminBtn" id="adminBtn6">Edit Course Outcome</button> 
+    </div>
+</div>
+{% endblock %}
+
+{% block custom_js %}
+<script src="{% static 'ahome.js' %}"></script>
+{% endblock %}

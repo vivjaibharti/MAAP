@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link href="{% static 'login.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="mainDiv">
+        <div class="innerDiv">
+            <div class="logo">
+                <img src="{% static 'tu_logo_approved.png' %}" alt="TU_Logo" class="img1" id="img1" />
+            </div>
+            <form action="" method="POST" class="form1" id="form1">
+                {% csrf_token %}
+                <div class="labelsDiv">
+                    <label for="userid" style="font-family: Georgia; font-weight: Bold">
+                        UserId
+                    </label>
+                </div>
+                <div class="inputboxDiv">
+                    <input type="text" name="userid" id="userid" placeholder="Enter Your UserId"
+                        style="width:80%;height: 25px;" required>
+                </div>
+                <div class="labelsDiv">
+                    <label for="password" style="font-family: Georgia; font-weight: Bold">
+                        Password
+                    </label>
+                </div>
+                <div class="inputboxDiv">
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password"
+                        style="width: 80%;height: 25px;" required>
+                </div>
+                <div id="loginbtnDiv">
+                    <button type="submit" style="background-color: aqua;  border-radius: 5px;padding: 5px;"
+                        id="aloginbtn" class="loginbtn">Admin/HOD Login</button>
+                    <button type="submit" style="background-color: aqua;  border-radius: 5px;padding: 5px;"
+                        id="floginbtn" class="loginbtn">Faculty Login</button>
+                </div>
+            </form>
+            <div class="forgetDiv" id="forgetDiv">
+                <a href="/tuqb/userinterface/forget_pwd/forget_pwd.php" style="font-weight: bold;">Forget Password?? Click Here</a>
+            </div>
+            <div class="loginError" style="display: flex; justify-content: center;" id="loginError">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="{% static 'login.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

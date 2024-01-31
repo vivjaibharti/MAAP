@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* .innerDiv{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+} */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#sessionDiv{
+    background-color: chartreuse;
+}
+.courseBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10%;
+    background: rgba(133, 225, 241, 0.89);
+    color: rgb(226, 2, 170);
+    font-weight: bolder;
+    font-size: 13px;
+    padding: 2%;
+  }

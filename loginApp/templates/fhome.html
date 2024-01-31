@@ -1,0 +1,79 @@
+{% extends 'master_home.html' %}
+{% load static %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'fhome.css' %}">
+{% endblock %}
+
+{% block home %}
+<a href="/loginApp/fhome">Home</a>
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Faculty Home Page</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-12 d-flex justify-content-center ">
+            <div class="container ">
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <div class="d-flex flex-column justify-content-center align-items-start">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="row">
+                                    <div class="col-md-6 col-12 d-flex flex-column">
+                                        <img id="imgProfilePic" src="/static/cse20049_profile_pic.jpg"
+                                            class="img-responsive" alt="UPLOAD UR PIC" width="100" height="100">
+                                        <label class="xsmallfont" id="btnChangeProfilePic"
+                                            style="cursor:pointer;">CHANGE</label>
+                                    </div>
+                                    <div class="col-md-6 col-12 
+                                        d-flex align-items-center">
+                                        <div class="smallfont">{{username}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xsmallfont">DESIGNATION:</div>
+                            <div class="smallfont">{{designation}}</div>
+
+                            <div class="xsmallfont">FACULTY ID:</div>
+                            <div class="smallfont">{{faculty_id}}</div>
+
+                            <div class="xsmallfont">DEPARTMENT:</div>
+                            <div class="smallfont">{{faculty_dept}}</div>
+
+                            <div class="xsmallfont">SCHOOL:</div>
+                            <div class="smallfont">{{faculty_school}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 col-12 d-flex justify-content-center">
+            <div class="container ">
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <button class="facultyButton" id="btnMap">
+                            <div class="text-center ">MAP</div>
+                        </button>
+                    </div>
+
+                    <div class="col d-flex justify-content-center coeRow">
+                        <button class="facultyButton" id="btnAap">
+                            <div class="text-center ">AAP</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block custom_js %}
+<script src="{% static 'fhome.js' %}"></script>
+{% endblock %}
