@@ -19,8 +19,13 @@
                 <label for="session_details"><b>SESSION</b></label>
             </div>
             <div class="col-7">
+                {% csrf_token %}
                 <select name="session_details" id="session_details">
-                    <option value="0">Select Session Details</option>
+                    <option value="-1">Select Session Details</option>
+                    {% for item in session_details %}
+                    <!-- {{ forloop.counter }}: {{ item }} -->
+                    <option value="{{item.session_id}}">{{item.session_term}}+{{item.session_year}}</option>
+                    {% endfor %}
                 </select>
             </div>
         </div>   
@@ -28,14 +33,14 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                SPRING SEMESTER 2024
+            <div class="col-12" id="session_title">
+
             </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row">
+        <div class="row" id="course_list">
             <div class="col d-flex justify-content-center">
                <button class="courseBtn" id="">
                 <div class="text-center">

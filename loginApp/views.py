@@ -94,8 +94,8 @@ def fhome(request):
         context={"username":request.session.get('facultyName'),"designation": request.session.get('designation'),"faculty_id": request.session.get('facultyId'),"faculty_dept": request.session.get('facultyDept'),"faculty_school": request.session.get('facultySchool'),}
 
         return render(request,'fhome.html',context)
-    
-     
+
+
 def logout(request):
     # return redirect('login.html')  # Change 'login' to your actual login page URL
         request.session.flush()
